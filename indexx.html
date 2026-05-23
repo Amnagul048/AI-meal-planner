@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>AI Meal Planner</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+<body class="auth-body">
+
+<!-- AUTH SECTION -->
+
+<div class="auth-box"
+     id="authBox">
+
+    <h1>AI Meal Planner</h1>
+
+    <input type="text"
+           id="name"
+           placeholder="Enter Name">
+
+    <input type="email"
+           id="email"
+           placeholder="Enter Email">
+
+    <input type="password"
+           id="password"
+           placeholder="Enter Password">
+
+    <button onclick="signup()">
+        Register
+    </button>
+
+    <button onclick="login()">
+        Login
+    </button>
+
+</div>
+
+<!-- DASHBOARD -->
+
+<div id="dashboard"
+     style="display:none; width:100%;">
+
+    <!-- NAVBAR -->
+
+    <div class="navbar">
+
+        <h2>AI Meal Planner</h2>
+
+        <button onclick="logout()"
+                style="width:120px;">
+            Logout
+        </button>
+
+    </div>
+
+    <!-- MAIN CONTAINER -->
+
+    <div class="container">
+
+        <!-- MEAL PLAN -->
+
+        <div class="card">
+
+            <h2>Diet Plan Generator</h2>
+
+            <input type="text"
+                   id="userName"
+                   placeholder="Enter Name">
+
+            <!-- AGE -->
+
+            <input type="number"
+                   id="age"
+                   placeholder="Enter Age">
+
+            <!-- GENDER -->
+
+            <select id="gender">
+
+                <option value="">
+                    Select Gender
+                </option>
+
+                <option value="Male">
+                    Male
+                </option>
+
+                <option value="Female">
+                    Female
+                </option>
+
+            </select>
+
+            <!-- WEIGHT -->
+
+            <input type="number"
+                   id="weight"
+                   placeholder="Enter Weight">
+
+            <!-- HEIGHT -->
+
+            <input type="number"
+                   id="height"
+                   placeholder="Enter Height">
+
+            <!-- GOAL -->
+
+            <select id="goal">
+
+                <option value="">
+                    Select Goal
+                </option>
+
+                <option value="Weight Loss">
+                    Weight Loss
+                </option>
+
+                <option value="Weight Gain">
+                    Weight Gain
+                </option>
+
+                <option value="Maintain Weight">
+                    Maintain Weight
+                </option>
+
+            </select>
+
+            <!-- DIET -->
+
+            <select id="diet">
+
+                <option value="">
+                    Select Diet
+                </option>
+
+                <option value="Vegetarian">
+                    Vegetarian
+                </option>
+
+                <option value="Non-Vegetarian">
+                    Non-Vegetarian
+                </option>
+
+                <option value="Vegan">
+                    Vegan
+                </option>
+
+                <option value="Keto">
+                    Keto
+                </option>
+
+                <option value="High Protein">
+                    High Protein
+                </option>
+
+                <option value="Low Carb">
+                    Low Carb
+                </option>
+
+                <option value="Mediterranean">
+                    Mediterranean
+                </option>
+
+            </select>
+
+            <!-- ALLERGY -->
+
+            <input type="text"
+                   id="allergy"
+                   placeholder="Enter Allergies (Milk, Eggs, Peanuts)">
+
+            <!-- INGREDIENTS -->
+
+            <textarea id="ingredients"
+                      placeholder="Enter Available Ingredients (Rice, Chicken, Bread)"
+                      style="width:100%;
+                             margin-top:15px;
+                             padding:10px;
+                             border-radius:10px;
+                             height:100px;"></textarea>
+
+            <!-- CALORIES TRACKER -->
+
+            <input type="number"
+                   id="calories"
+                   placeholder="Enter Daily Calories Goal">
+
+            <!-- WEEKLY PLAN -->
+
+            <select id="days">
+
+                <option value="7 Days">
+                    7 Days Meal Plan
+                </option>
+
+            </select>
+
+            <!-- GENERATE BUTTON -->
+
+            <button onclick="generatePlan()">
+                Generate Plan
+            </button>
+
+            <!-- RESULT -->
+
+            <div id="result"
+                 class="result-card"></div>
+
+        </div>
+
+        <!-- CHATBOT -->
+
+        <div class="card">
+
+            <h2>AI Chatbot</h2>
+
+            <div class="chat-box"
+                 id="chatBox"></div>
+
+            <input type="text"
+                   id="chatInput"
+                   placeholder="Ask anything about diet">
+
+            <button onclick="sendMessage()">
+                Send
+            </button>
+
+        </div>
+
+        <!-- DOWNLOAD -->
+
+        <div class="card full-width">
+
+            <h2>Download Diet Plan</h2>
+
+            <p style="margin-top:10px;
+                      margin-bottom:15px;
+                      color:#ccc;">
+
+                Download your generated AI meal plan.
+
+            </p>
+
+            <button onclick="downloadPDF()">
+                Download PDF
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
